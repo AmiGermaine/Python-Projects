@@ -1,6 +1,22 @@
 # Lets create a Nice or mean game
 # 
 
+from colorama import init, Fore, Back, Style
+
+# essential for Windows environment
+init()
+# all available foreground colors
+FORES = [ Fore.BLACK, Fore.RED, Fore.GREEN, Fore.YELLOW, Fore.BLUE, Fore.MAGENTA, Fore.CYAN, Fore.WHITE ]
+# all available background colors
+BACKS = [ Back.BLACK, Back.RED, Back.GREEN, Back.YELLOW, Back.BLUE, Back.MAGENTA, Back.CYAN, Back.WHITE ]
+# brightness values
+BRIGHTNESS = [ Style.DIM, Style.NORMAL, Style.BRIGHT ]   
+
+def print_with_color(s, color=Fore.GREEN, brightness=Style.NORMAL, **kwargs):
+    """Utility function wrapping the regular `print()` function 
+    but with colors and brightness"""
+    print(f"{brightness}{color}{s}{Style.RESET_ALL}", **kwargs)
+
 
 
 def start(nice=0,mean=0,name=""):
@@ -27,7 +43,7 @@ def describe_game(name):
             if name == "":
                 name = input("\nWhat is your name? \n>>> ").capitalize()
                 if name != "":
-                    print("\nWelcome, {}!".format(name))
+                    print_with_color("\nWelcome, {}!".format(name))
                     print("\nIn this game, you will be greeted \nby several different people. \nYou can choose to to be nice or mean")
                     print("but at the end of the game your fate \nwill be sealed by your actions.")
                     stop = False
@@ -53,7 +69,7 @@ def nice_mean(nice,mean,name):
 
 
 def show_score(nice,mean,name):
-    print("\n{}, your current total: \n({}, Nice) and ({}, Mean)".format(name,nice,mean))
+    print_with_color("\n{}, your current total: \n({}, Nice) and ({}, Mean)".format(name,nice,mean))
 
 
 
