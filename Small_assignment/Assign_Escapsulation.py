@@ -13,4 +13,5 @@ class Car:
 whitecar = Car()
 whitecar.setName('EV6')
 kia=whitecar.getName()
+print('kia')
 print('2023')
