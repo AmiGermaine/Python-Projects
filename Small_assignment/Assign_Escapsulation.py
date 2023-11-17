@@ -1,7 +1,8 @@
-# Private attribute
+
 class Car:
     def __init__(self):
-        self.__lName="2023"
+        self.__Name="2023" # Private attribute
+        self._origin = "" # Protectecd attribute
 
     def getName(self):
         print(self.__Name)
@@ -11,14 +12,9 @@ class Car:
 
 
 whitecar = Car()
+whitecar.getName() # Original name before change.
 whitecar.setName('EV6')
-kia=whitecar.getName()
-print('kia')
-print('2023')
-
-# Protectecd attribute
-def Country(self):
-    self._origin = ""
+whitecar.getName() # New Name
 
 whitecar._origin = "Japan"
-print(whitecar._origin)
+print(whitecar._origin) # print protected attribute.
