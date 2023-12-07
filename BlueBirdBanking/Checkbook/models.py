@@ -21,7 +21,7 @@ TransactionTypes = [('Deposit', 'Deposit'), ('Withdrawal', 'Withdrawal')]
 
 # Creates the Transaction Model
 class Transaction(models.Model):
-    data = models.DateField()
+    date = models.DateField()
     type = models.CharField(max_length=10, choices=TransactionTypes)
     amount = models.DecimalField(max_digits=15, decimal_places=2)
     description = models.CharField(max_length=100)
