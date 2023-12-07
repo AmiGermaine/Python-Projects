@@ -11,7 +11,7 @@ This project uses a Python function that creates a phonebook for the user. The f
 
 ## Check Files Gui
 "This project allows the user to choose to transfer all .txt files from one chosen directory to another. 
-All files that are moved will be saved in a database"
+All files that are moved will be saved in a database".
 
 ## Django
 For this project, I learned how to use the Django framework and how to create a dynamic website.
